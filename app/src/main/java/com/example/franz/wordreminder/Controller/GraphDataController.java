@@ -69,12 +69,13 @@ public class GraphDataController {
         String key = String.valueOf(getCurrentDay());
         String stringValue = properties.getProperty(key);
         if(stringValue != null){
-            Log.e(LOG_TAG, "stringValue: "+stringValue);
+            //Log.e(LOG_TAG, "stringValue: "+stringValue);
             int value = Integer.valueOf(stringValue);
+            //Log.e(LOG_TAG, "value: "+value);
             value++;
-            properties.remove(key);
+            //properties.remove(key);
             //value is incremented and new set
-            properties.setProperty(stringValue, String.valueOf(value));
+            properties.setProperty(key, String.valueOf(value));
         }
         else {
             //first time for this day

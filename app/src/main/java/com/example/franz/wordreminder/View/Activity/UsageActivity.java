@@ -13,6 +13,7 @@ import com.example.franz.wordreminder.R;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.ValueDependentColor;
 import com.jjoe64.graphview.Viewport;
+import com.jjoe64.graphview.helper.StaticLabelsFormatter;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 
@@ -48,6 +49,13 @@ public class UsageActivity extends AbstractActivity {
         viewport.setMinX(1);
         viewport.setMaxY(50);
         viewport.setMinY(0);
+        /*StaticLabelsFormatter formatter = new StaticLabelsFormatter(graph);
+        String[] strings = new String[5];
+        strings[0] = "0";
+        strings[4] = String.valueOf(MaxX);
+        for(int i = 1 ; i < 4; i++){
+
+        }*/
     }
 
 
@@ -64,7 +72,7 @@ public class UsageActivity extends AbstractActivity {
             }
             BarGraphSeries<DataPoint> series = new BarGraphSeries<>(dataPoints);
             setBarColor(series);
-            setSettings(dataController.lastDays());
+            //setSettings(dataController.lastDays());
             graph.removeAllSeries();
             graph.addSeries(series);
         }
@@ -89,7 +97,6 @@ public class UsageActivity extends AbstractActivity {
             series.setSpacing(4);
             setBarColor(series);
             setSettings(dataController.thisDays());
-            dataController.thisDays();
             //remove unnecessary other series
             graph.removeAllSeries();
             graph.addSeries(series);
@@ -105,10 +112,10 @@ public class UsageActivity extends AbstractActivity {
             @Override
             public int get(DataPoint data) {
                 if(data.getY() < 25){
-                    return Color.BLUE;
+                    return Color.GREEN;
                 }
                 else if(data.getY() < 50){
-                    return Color.GREEN;
+                    return Color.BLUE;
                 }
                 else if(data.getY() < 75){
                     return Color.RED;
