@@ -24,6 +24,15 @@ public class UsageActivity extends AbstractActivity {
 
     private static final String LOG_TAG = UsageActivity.class.getSimpleName();
 
+    //has to be > 1
+    private static final int MAX_HEIGHT = 100;
+
+    //values for the colors
+    //depending on the MAX_HEIGHT value
+    private static final int GREEN_BORDER = MAX_HEIGHT/4;
+    private static final int BLUE_BORDER = 2 * GREEN_BORDER;
+    private static final int RED_BORDER = 3 * GREEN_BORDER;
+
     private GraphView graph;
     private Button buttonLast;
     private Button buttonThis;
@@ -40,22 +49,18 @@ public class UsageActivity extends AbstractActivity {
         buttonThis = (Button) findViewById(R.id.activity_usage_button_this);
         dataController = new GraphDataController(getApplicationContext());
         //setup the buttons
+        setSettings(31);
         buttonThis.callOnClick();
     }
 
     private void setSettings(int MaxX){
         Viewport viewport = graph.getViewport();
+        viewport.setXAxisBoundsManual(true);
+        viewport.setYAxisBoundsManual(true);
         viewport.setMaxX(MaxX);
         viewport.setMinX(1);
-        viewport.setMaxY(50);
+        viewport.setMaxY(MAX_HEIGHT);
         viewport.setMinY(0);
-        /*StaticLabelsFormatter formatter = new StaticLabelsFormatter(graph);
-        String[] strings = new String[5];
-        strings[0] = "0";
-        strings[4] = String.valueOf(MaxX);
-        for(int i = 1 ; i < 4; i++){
-
-        }*/
     }
 
 
@@ -111,13 +116,13 @@ public class UsageActivity extends AbstractActivity {
         series.setValueDependentColor(new ValueDependentColor<DataPoint>() {
             @Override
             public int get(DataPoint data) {
-                if(data.getY() < 25){
+                if(data.getY() < GREEN_BORDER){
                     return Color.GREEN;
                 }
-                else if(data.getY() < 50){
+                else if(data.getY() < BLUE_BORDER){
                     return Color.BLUE;
                 }
-                else if(data.getY() < 75){
+                else if(data.getY() < RED_BORDER){
                     return Color.RED;
                 }
                 else{
