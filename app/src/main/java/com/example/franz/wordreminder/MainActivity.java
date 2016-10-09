@@ -107,14 +107,14 @@ public class MainActivity extends AbstractActivity {
         /*DeleteWordDialog deleteWordDialog = new DeleteWordDialog();
         deleteWordDialog.initDialog(wordStore, getApplicationContext());
         deleteWordDialog.show(getFragmentManager(), "DeleteWordDialog");*/
-        GraphDataController dataController = new GraphDataController(getApplicationContext());
+        /*GraphDataController dataController = new GraphDataController(getApplicationContext());
         if(!dataController.thisAvailable()){
             Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.layout_usage_not_data_available), Toast.LENGTH_SHORT);
             toast.show();
         }
         else {
             switchActivity(UsageActivity.class);
-        }
+        }*/
     }
 
     //on-click methods for all views

@@ -170,8 +170,8 @@ public class GraphDataController {
                 Log.e(LOG_TAG, "value: "+value);*/
                 if(value != null){
                     list.add(new DataPoint(Double.valueOf(key), Double.valueOf(value)));
-                    Log.e(LOG_TAG, "key: "+key);
-                    Log.e(LOG_TAG, "value: "+value);
+                    /*Log.e(LOG_TAG, "key: "+key);
+                    Log.e(LOG_TAG, "value: "+value);*/
                 }
                 //otherwise this day will not be added
             }
@@ -207,7 +207,7 @@ public class GraphDataController {
 
     private boolean fileExists(String path){
         try{
-            FileInputStream inputStream = context.openFileInput(path);
+            context.openFileInput(path);
             return true;
         }
         catch (IOException ioe){

@@ -66,7 +66,6 @@ public class UsageActivity extends AbstractActivity {
 
     public void onLast(View v){
         if(dataController.lastAvailable()) {
-            Log.e(LOG_TAG, "onLast");
             buttonLast.setEnabled(false);
             buttonThis.setEnabled(true);
             //we must get the actual data
@@ -94,10 +93,10 @@ public class UsageActivity extends AbstractActivity {
             //we must get the actual data
             ArrayList<DataPoint> points = dataController.thisMonthValues();
             DataPoint[] dataPoints = new DataPoint[points.size()];
-            for (int i = 0; i < dataPoints.length; i++) {
+            /*for (int i = 0; i < dataPoints.length; i++) {
                 dataPoints[i] = points.get(i);
                 Log.e(LOG_TAG, "dataPoint: " + dataPoints[i]);
-            }
+            }*/
             BarGraphSeries<DataPoint> series = new BarGraphSeries<>(dataPoints);
             series.setSpacing(4);
             setBarColor(series);
