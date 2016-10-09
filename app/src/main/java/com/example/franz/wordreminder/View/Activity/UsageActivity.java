@@ -76,7 +76,6 @@ public class UsageActivity extends AbstractActivity {
 
     public void onThis(View v){
         if(dataController.thisAvailable()) {
-            Log.e(LOG_TAG, "onThis");
             buttonThis.setEnabled(false);
             buttonLast.setEnabled(true);
             //we must get the actual data

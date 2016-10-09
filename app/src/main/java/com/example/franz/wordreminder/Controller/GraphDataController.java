@@ -232,8 +232,21 @@ public class GraphDataController {
         }
         //otherwise it is february
 
-        //we have to remember that february can have 29 days
-        return 28;
+        //remember the leap year
+        if(isLeapYear(getCurrentYear())) {
+            //one day more than usually
+            return 29;
+        }
+        else {
+            return 28;
+        }
+    }
+
+    private boolean isLeapYear(int year){
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.YEAR, year);
+        //it is a leap if there are more than 365 days in a year
+        return (cal.getActualMaximum(Calendar.DAY_OF_YEAR) > 365);
     }
 
 }

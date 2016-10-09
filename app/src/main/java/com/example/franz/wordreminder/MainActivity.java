@@ -120,7 +120,6 @@ public class MainActivity extends AbstractActivity {
     //on-click methods for all views
 
     public void onFirstView(View v){
-        Log.e(LOG_TAG, "fistView");
         String nativeLang = (String)nativeTextViews.get(0).getText();
         Log.e(LOG_TAG, nativeLang);
         Word word = wordStore.findWord(nativeLang);
@@ -136,7 +135,6 @@ public class MainActivity extends AbstractActivity {
     }
 
     public void onSecondView(View v){
-        Log.e(LOG_TAG, "secondView");
         String nativeLang = (String)nativeTextViews.get(1).getText();
         Word word = wordStore.findWord(nativeLang);
         if(word != null) {
@@ -151,7 +149,6 @@ public class MainActivity extends AbstractActivity {
     }
 
     public void onThirdView(View v){
-        Log.e(LOG_TAG, "thirdView");
         String nativeLang = (String)nativeTextViews.get(2).getText();
         Word word = wordStore.findWord(nativeLang);
         if(word != null) {
@@ -184,7 +181,6 @@ public class MainActivity extends AbstractActivity {
     public void onPause(){
         super.onPause();
         //we have to do all things that have to be done before leaving the app
-        Log.e(LOG_TAG, "leaving this activity");
         timeExecutorService.shutdown();
     }
 
