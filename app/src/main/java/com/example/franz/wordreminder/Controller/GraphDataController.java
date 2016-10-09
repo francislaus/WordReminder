@@ -161,19 +161,20 @@ public class GraphDataController {
             Properties properties = new Properties();
             loadProperties(properties, path);
             ArrayList<DataPoint> list = new ArrayList<>();
-            for(int i = 1; i < 33; i++){
+            //not more than 31 days in a month
+            for(int i = 1; i < 31; i++){
                 String key = String.valueOf(i);
                 String value = properties.getProperty(key);
                 /*Log.e(LOG_TAG, "key: "+key);
                 Log.e(LOG_TAG, "value: "+value);*/
-                if(value == null){
-                    return list;
-                }
-                else{
-                    //add the point
+                if(value != null){
                     list.add(new DataPoint(Double.valueOf(key), Double.valueOf(value)));
+                    Log.e(LOG_TAG, "key: "+key);
+                    Log.e(LOG_TAG, "value: "+value);
                 }
+                //otherwise this day will not be added
             }
+            return list;
         }
         else{
             Log.e(LOG_TAG, "getValues file does not exist");

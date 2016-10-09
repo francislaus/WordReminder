@@ -15,7 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.Activity.UsageActivity"></activity>
+        <activity
+            android:name=".View.Activity.UsageActivity"
+            android:screenOrientation="landscape"
+            android:noHistory="true"
+            >
+        </activity>
     </application>
 
 </manifest>
