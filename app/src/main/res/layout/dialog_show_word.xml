@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/layout_show_word_dialog_native"
+            android:gravity="center"
+            android:layout_weight="2"/>
+
+        <TextView
+            android:id="@+id/dialog_show_word_textview_native"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="King"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/layout_show_word_dialog_foreign"
+            android:gravity="center"
+            android:layout_weight="2"/>
+
+        <TextView
+            android:id="@+id/dialog_show_word_textview_foreign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="König"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/layout_show_word_dialog_partofspeech"
+            android:gravity="center"
+            android:layout_weight="2"/>
+
+        <TextView
+            android:id="@+id/dialog_show_word_textview_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Noun"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/layout_show_word_dialog_timeslookedup"
+            android:gravity="center"
+            android:layout_weight="2"/>
+
+        <TextView
+            android:id="@+id/dialog_show_word_textview_times"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="2"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

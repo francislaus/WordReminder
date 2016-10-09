@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- texts added for more debug-confort-->
+
+    <EditText
+        android:id="@+id/dialog_add_word_edittext_native"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Way"
+        android:hint="Native language"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/dialog_add_word_edittext_foreign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weg"
+        android:hint="Foreign language"
+        android:inputType="text"/>
+
+</LinearLayout>

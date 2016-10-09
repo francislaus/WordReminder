@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MAIN LAYOUT -->
+
+    <string name="layout_main_default_native">Muttersprache</string>
+    <string name="layout_main_default_foreign">Fremdsprache</string>
+    <string name="layout_main_button_add_word">Wort aufnehmen</string>
+    <string name="layout_main_button_delete_word">Wort löschen</string>
+    <string name="layout_main_last_words">Drittletze Wörter</string>
+    <string name="layout_main_word_not_found">Das sollte nicht vorkommen - Wort wurde nicht gefunden</string>
+
+    <!-- SELECT WORD TYPE DIALOG -->
+
+    <!--<string name="layout_select_word_type_dialog_noun">Nomen</string>
+    <string name="layout_select_word_type_dialog_verb">Verb</string>
+    <string name="layout_select_word_type_dialog_adjective">Adjektiv</string>
+    <string name="layout_select_word_type_dialog_adverb">Adverb</string>-->
+
+    <!-- DELETE WORD DIALOG -->
+
+    <string name="layout_delete_word_dialog_deleted_true">Wort gelöscht</string>
+    <string name="layout_delete_word_dialog_deleted_false">Word nicht gelöscht</string>
+
+    <!-- SHOW WORD DIALOG -->
+    <string name="layout_show_word_dialog_native">Muttersprache</string>
+    <string name="layout_show_word_dialog_foreign">Fremdwort</string>
+    <string name="layout_show_word_dialog_partofspeech">Wordart</string>
+    <string name="layout_show_word_dialog_timeslookedup">Anzahl an Aufrufen</string>
+
+    <!-- USAGE LAYOUT -->
+
+    <string name="layout_usage_not_data_available">Keine Daten vorhanden</string>
+
+</resources>

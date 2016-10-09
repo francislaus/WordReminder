@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">WordReminder</string>
+
+    <!-- MAIN LAYOUT -->
+
+    <string name="layout_main_default_native">NativeLanguage</string>
+    <string name="layout_main_default_foreign">ForeignLanguage</string>
+    <string name="layout_main_button_add_word">Add word</string>
+    <string name="layout_main_button_delete_word">Delete word</string>
+    <string name="layout_main_last_words">Last 3 words</string>
+    <string name="layout_main_word_not_found">That´s strange - word not found</string>
+
+    <!-- SELECT WORD TYPE DIALOG -->
+
+    <string name="layout_select_word_type_dialog_noun">Noun</string>
+    <string name="layout_select_word_type_dialog_verb">Verb</string>
+    <string name="layout_select_word_type_dialog_adjective">Adjectiv</string>
+    <string name="layout_select_word_type_dialog_adverb">Adverb</string>
+
+    <!-- DELETE WORD DIALOG -->
+
+    <string name="layout_delete_word_dialog_deleted_true">Word deleted</string>
+    <string name="layout_delete_word_dialog_deleted_false">Word not deleted</string>
+
+    <!-- SHOW WORD DIALOG -->
+    <string name="layout_show_word_dialog_native">Native</string>
+    <string name="layout_show_word_dialog_foreign">Foreign</string>
+    <string name="layout_show_word_dialog_partofspeech">Part of speech</string>
+    <string name="layout_show_word_dialog_timeslookedup">Times looked up</string>
+
+    <!-- USAGE LAYOUT -->
+
+    <string name="layout_usage_not_data_available">No data available</string>
+
+</resources>
