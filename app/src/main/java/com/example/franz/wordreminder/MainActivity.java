@@ -1,6 +1,7 @@
 package com.example.franz.wordreminder;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -49,6 +50,9 @@ public class MainActivity extends AbstractActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
+        setSupportActionBar(toolbar);
+        //todo: go on
 
         storeButton = (Button) findViewById(R.id.activity_main_store_button);
 
